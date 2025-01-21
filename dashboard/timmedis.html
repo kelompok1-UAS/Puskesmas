@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Pegawai</title>
+    <link rel="icon" type="image/png" href="../img/rs.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome untuk ikon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar untuk Mobile -->
+    <nav class="bg-blue-800 text-white p-4 fixed top-0 left-0 right-0 z-50 md:hidden">
+        <div class="flex justify-between items-center">
+            <h2 class="text-xl font-bold">Welcome Admin</h2>
+            <!-- Tombol Hamburger untuk Mobile -->
+            <button id="hamburger" class="text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Menu Navbar (Muncul saat tombol hamburger diklik) -->
+        <ul id="mobile-menu" class="hidden mt-4 space-y-2">
+            <li>
+                <a href="../dashboard/dashboard.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                    <span class="mr-2">🏠</span>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="../dashboard/profile.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                    <span class="mr-2">👩‍🎓</span>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="../dashboard/poliklinik.html" class="flex items-center p-2 bg-blue-700 rounded">
+                    <span class="mr-2">🏥</span>
+                    <span>Poliklinik</span>
+                </a>
+            </li>
+            <li>
+                <a href="../dashboard/timmedis.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                    <span class="mr-2">🩺</span>
+                    <span>Tim Medis</span>
+                </a>
+            </li>
+            <li>
+                <a href="../dashboard/pasien.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                    <span class="mr-2">📝</span>
+                    <span>Pasien</span>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                    <span class="mr-2">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Sidebar untuk Desktop -->
+    <div class="bg-blue-800 text-white w-64 p-6 fixed top-0 left-0 bottom-0 z-40 hidden md:block">
+        <div class="logo mb-8">
+            <h2 class="text-2xl font-bold">Welcome Admin</h2>
+        </div>
+        <ul class="space-y-4">
+            <li>
+                <a href="../dashboard/dashboard.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                    <span class="mr-2">🏠</span>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="../dashboard/profile.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                    <span class="mr-2">👩‍🎓</span>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="../dashboard/poliklinik.html" class="flex items-center p-2 bg-blue-700 rounded">
+                    <span class="mr-2">🏥</span>
+                    <span>Poliklinik</span>
+                </a>
+            </li>
+            <li>
+                <a href="../dashboard/timmedis.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                    <span class="mr-2">🩺</span>
+                    <span>Tim Medis</span>
+                </a>
+            </li>
+            <li>
+                <a href="../dashboard/pasien.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                    <span class="mr-2">📝</span>
+                    <span>Pasien</span>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                    <span class="mr-2">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-4 md:p-8 mt-16 md:mt-0 md:ml-64">
+        <header class="flex justify-between items-center mb-8">
+            <h1 class="text-2xl font-bold">Create Pegawai</h1>
+            <div class="user-profile flex items-center">
+                <span class="mr-2">👤</span>
+                <a href="../admin/loginadmin.html">Admin</a>
+            </div>
+        </header>
+
+        <!-- Form Create Pegawai -->
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <form id="createPegawaiForm">
+                    <div class="mb-4">
+                        <label for="nama" class="block text-sm font-medium text-gray-700">Nama Pegawai</label>
+                        <input type="text" id="nama" name="nama" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="ttl" class="block text-sm font-medium text-gray-700">Tempat Tanggal Lahir</label>
+                        <input type="text" id="ttl" name="ttl" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700">Gender</label>
+                        <div class="mt-1">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="gender" value="Laki-laki" class="form-radio text-blue-500" required>
+                                <span class="ml-2">Laki-laki</span>
+                            </label>
+                            <label class="inline-flex items-center ml-6">
+                                <input type="radio" name="gender" value="Perempuan" class="form-radio text-blue-500" required>
+                                <span class="ml-2">Perempuan</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="nik" class="block text-sm font-medium text-gray-700">NIK</label>
+                        <input type="text" id="nik" name="nik" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="alamat" class="block text-sm font-medium text-gray-700">Alamat</label>
+                        <textarea id="alamat" name="alamat" rows="3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required></textarea>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="telepon" class="block text-sm font-medium text-gray-700">Nomor Telepon</label>
+                        <input type="text" id="telepon" name="telepon" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+
+                    <div class="flex justify-end space-x-4">
+                        <button type="button" onclick="window.location.href='poliklinik.html'" class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 transition duration-300">
+                            Batal
+                        </button>
+                        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">
+                            Simpan
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Tabel Data Pegawai -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-lg font-semibold mb-4">Daftar Pegawai</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead class="bg-blue-800 text-white">
+                            <tr>
+                                <th class="py-3 px-6 text-left">Nama</th>
+                                <th class="py-3 px-6 text-left">TTL</th>
+                                <th class="py-3 px-6 text-left">Gender</th>
+                                <th class="py-3 px-6 text-left">NIK</th>
+                                <th class="py-3 px-6 text-left">Alamat</th>
+                                <th class="py-3 px-6 text-left">Telepon</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pegawaiTableBody" class="text-gray-700">
+                            <!-- Data pegawai pake js brokkkki -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+    <script>
+        let pegawaiList = JSON.parse(localStorage.getItem('pegawaiList')) || [];
+        function addPegawaiToTable(pegawai) {
+            const tableBody = document.getElementById('pegawaiTableBody');
+            const row = document.createElement('tr');
+            row.className = 'border-b hover:bg-gray-50';
+            row.innerHTML = `
+                <td class="py-4 px-6">${pegawai.nama}</td>
+                <td class="py-4 px-6">${pegawai.ttl}</td>
+                <td class="py-4 px-6">${pegawai.gender}</td>
+                <td class="py-4 px-6">${pegawai.nik}</td>
+                <td class="py-4 px-6">${pegawai.alamat}</td>
+                <td class="py-4 px-6">${pegawai.telepon}</td>
+            `;
+            tableBody.appendChild(row);
+        }
+        function renderPegawaiList() {
+            pegawaiList.forEach(pegawai => addPegawaiToTable(pegawai));
+        }
+        document.getElementById('createPegawaiForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+            pegawaiList.push(data);
+            localStorage.setItem('pegawaiList', JSON.stringify(pegawaiList));
+            addPegawaiToTable(data);
+
+            e.target.reset();
+        });
+        renderPegawaiList();
+    </script>
+
+    <!-- Script untuk Navbar Mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Toggle menu saat tombol hamburger diklik
+            hamburger.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Tutup menu saat mengklik di luar menu
+            document.addEventListener('click', function (event) {
+                if (!mobileMenu.contains(event.target) && !hamburger.contains(event.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

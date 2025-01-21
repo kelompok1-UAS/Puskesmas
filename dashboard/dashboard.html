@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="icon" type="image/png" href="../img/rs.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <div class="bg-blue-800 text-white w-full md:w-64 p-4 md:p-6 fixed md:relative z-50">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl md:text-2xl font-bold">Welcome Admin</h2>
+                <button id="hamburger" class="text-2xl md:hidden">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <!-- sidebar -->
+            </div class="flex flex-col md:flex-row">
+            <ul id="sidebar-menu" class="space-y-2 hidden md:block">
+                <li>
+                    <a href="../dashboard/dashboard.html" class="flex items-center p-2 bg-blue-700 rounded">
+                        <span class="mr-2">🏠</span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../dashboard/profile.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                        <span class="mr-2">👩‍🎓</span>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../dashboard/poliklinik.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                        <span class="mr-2">🏥</span>
+                        <span>Poliklinik</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../dashboard/timmedis.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                        <span class="mr-2">🩺</span>
+                        <span>Tim Medis</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../dashboard/pasien.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                        <span class="mr-2">📝</span>
+                        <span>Pasien</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../index.html" class="flex items-center p-2 hover:bg-blue-700 rounded">
+                        <span class="mr-2">🚪</span>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-4 md:p-8 mt-16 md:mt-0">
+            <header class="flex justify-between items-center mb-6 mt-1 md:mb-8">
+                <h1 class="text-xl md:text-2xl font-bold">Dashboard</h1>
+                <div class="user-profile flex items-center">
+                    <span class="mr-2">👤</span>
+                    <a href="../admin/loginadmin.html" class="text-sm md:text-base">Admin</a>
+                </div>
+            </header>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6 md:mb-8">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-base md:text-lg font-semibold mb-2">Total Pasien</h3>
+                    <p class="text-xl md:text-2xl font-bold">192,290</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-base md:text-lg font-semibold mb-2">Pengeluaran</h3>
+                    <p class="text-xl md:text-2xl font-bold">RP.12.100.910.123</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-base md:text-lg font-semibold mb-2">Total Pegawai</h3>
+                    <p class="text-xl md:text-2xl font-bold">4</p>
+                </div>
+            </div>
+
+            <!-- Charts Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 md:mb-8">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-base md:text-lg font-semibold mb-4">Monthly Sales</h3>
+                    <canvas id="salesChart"></canvas>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-base md:text-lg font-semibold mb-4">User Activity</h3>
+                    <canvas id="activityChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Calendar -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h3 class="text-base md:text-lg font-semibold mb-4">Kalender</h3>
+                <div id="calendar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../dashboard/js/script2.js"></script>
+</body>
+</html>

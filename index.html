@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Puskesmas STTNF Depok - Melayani dengan sepenuh hati untuk kesehatan masyarakat">
+    <title>Puskesmas Depok</title>
+    <link rel="icon" type="image/png" href="img/rs.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        @media (max-width: 768px) {
+            .menu-open {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-900 text-white z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#home" class="text-2xl font-bold flex items-center space-x-2">
+                    <span>Puskesmas</span>
+                    <span class="text-3xl">🏥</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="hover:text-red-400 transition">Layanan</a>
+                    <a href="#testimoni" class="hover:text-red-400 transition">Testimoni</a>
+                    <a href="#doctors" class="hover:text-red-400 transition">Profile Dokter</a>
+                    <a href="#about" class="hover:text-red-400 transition">About</a>
+                    <a href="views/login.html"
+                        class="bg-red-500 px-4 py-2 rounded-lg hover:bg-red-600 transition">Login</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuToggle" class="md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-6">
+                <a href="#services" class="block py-2 hover:text-red-400 transition">Layanan</a>
+                <a href="#testimoni" class="block py-2 hover:text-red-400 transition">Testimoni</a>
+                <a href="#doctors" class="block py-2 hover:text-red-400 transition">Dokter</a>
+                <a href="#about" class="block py-2 hover:text-red-400 transition">Tentang</a>
+                <a href="views/login.html" class="block py-2 text-red-500 hover:text-red-400 transition">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 bg-gray-900 text-white min-h-screen flex items-center">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-6">Selamat Datang di Puskesmas Depok</h1>
+            <p class="text-xl text-gray-400 mb-8">
+                Jl. Raya Lenteng Agung No.20-21, Srengseng Sawah, Kec. Jagakarsa, Jakarta Selatan
+            </p>
+            <a href="#services" class="bg-red-500 text-white px-8 py-3 rounded-lg text-lg hover:bg-red-600 transition">
+                Lihat Layanan
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Layanan Kami</h2>
+                <p class="text-gray-600">Melayani berbagai kebutuhan kesehatan Anda dengan profesional</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="p-8">
+                        <div class="flex items-start space-x-6">
+                            <img src="img/gigi.jpeg" alt="Pelayanan Gigi" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="text-xl font-bold mb-3">Pelayanan Gigi</h3>
+                                <p class="text-gray-600 mb-4">
+                                    "Pelayanan unit gigi dilakukan setiap hari kerja dengan dokter spesialis gigi
+                                    berpengalaman"
+                                </p>
+                                <a href="./palayanan/gigi.html" class="text-red-500 hover:text-red-600 transition">Selengkapnya
+                                    →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="p-8">
+                        <div class="flex items-start space-x-6">
+                            <img src="img/lansia (2) (1).jpeg" alt="Pelayanan Lansia"
+                                class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="text-xl font-bold mb-3">Pelayanan Lansia</h3>
+                                <p class="text-gray-600 mb-4">
+                                    "Layanan khusus untuk pasien di atas 60 tahun dengan perawatan yang komprehensif"
+                                </p>
+                                <a href="./palayanan/lansia.html" class="text-red-500 hover:text-red-600 transition">Selengkapnya
+                                    →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="p-8">
+                        <div class="flex items-start space-x-6">
+                            <img src="img/lahiran.jpg" alt="Pelayanan Anak" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="text-xl font-bold mb-3">Pelayanan Kandungan</h3>
+                                <p class="text-gray-600 mb-4">
+                                  "Dari awal kehidupan hingga lahir ke dunia, kesehatan Anda dan bayi adalah prioritas kami."                                </p>
+                                <a href="./palayanan/kandungan.html" class="text-red-500 hover:text-red-600 transition">Selengkapnya
+                                    →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="p-8">
+                        <div class="flex items-start space-x-6">
+                            <img src="img/gizi (2).jpeg" alt="Pelayanan Gizi" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="text-xl font-bold mb-3">Pelayanan Gizi</h3>
+                                <p class="text-gray-600 mb-4">
+                                    "Konsultasi gizi untuk ibu hamil, bayi, dan pasien dengan kebutuhan khusus"
+                                </p>
+                                <a href="./palayanan/gizi.html" class="text-red-500 hover:text-red-600 transition">Selengkapnya
+                                    →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Dokter Spesialis</h2>
+                <p class="text-gray-400">Tim dokter profesional kami siap melayani Anda</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Doctor Card 1 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="img/doktor1.jpg" alt="Dr. Hudzaifah Arrantisi" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Prof. Dr. Hudzaifah Arrantisi S.Kom M.Kom</h3>
+                        <p class="text-green-400 font-semibold mb-4">Dokter Gigi</p>
+                        <p class="text-gray-400 text-sm">
+                            "Menjadi dokter gigi adalah tentang melayani, menyembuhkan, dan membawa kembali kepercayaan
+                            diri. Karena setiap senyuman punya cerita." 😁🦷
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Doctor Card 2 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="img/doktor2.jpg" alt="Dr. Reza Alfa Bani Pratama S.Gz. M.A."
+                        class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Dr. Reza Alfa Bani Pratama S.Gz. M.A.</h3>
+                        <p class="text-green-400 font-semibold mb-4">Dokter Kandungan</p>
+                        <p class="text-gray-400 text-sm">
+                            "Setiap senyum kecil adalah tanggung jawab besar. Saya percaya bahwa kesehatan anak-anak
+                            adalah fondasi masa depan yang lebih baik." 🩺✨
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Doctor Card 3 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="img/dokter3(2).jpg" alt="Prof. Dr. Hanif Fatih Azzam S.Ked M.Kes"
+                        class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Prof. Dr. Hanif Fatih Azzam S.Ked M.Kes</h3>
+                        <p class="text-green-400 font-semibold mb-4">Dokter Lansia</p>
+                        <p class="text-gray-400 text-sm">
+                            "Setiap kerutan di wajah mereka menyimpan cerita. Sebagai dokter lansia, saya merasa
+                            terhormat membantu mereka menikmati hari-hari dengan kesehatan dan kenyamanan yang layak
+                            mereka dapatkan."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Doctor Card 4 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="img/dokter4.jpg" alt="Dr. Assyifa Khoirunnisa Putri S.Ked M.Kes"
+                        class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Dr. Assyifa Khoirunnisa Putri S.Ked M.Kes</h3>
+                        <p class="text-green-400 font-semibold mb-4">Dokter Gizi</p>
+                        <p class="text-gray-400 text-sm">
+                            "Kesehatan dimulai dari apa yang kita makan. Sebagai dokter gizi, misi saya adalah
+                            memberikan panduan untuk hidup sehat dan menciptakan hubungan positif dengan makanan."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimoni Section -->
+<section id="testimoni" class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">Respon pengunjung</h2>
+          <p class="text-gray-600">Testimoni dari pasien yang telah merasakan pelayanan kami.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Testimoni 1 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+              <div class="p-6 text-center">
+                  <img src="img/testi1.jpg" alt="Testimoni 1" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                  <h3 class="font-bold text-xl mb-2">Agus wicaksono jayaningrat</h3>
+                  <p class="text-gray-600 text-sm">
+                      "Pelayanan di Puskesmas Depok sangat ramah dan profesional. Dokter gigi sangat berpengalaman, saya puas!"
+                  </p>
+              </div>
+          </div>
+
+          <!-- Testimoni 2 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+              <div class="p-6 text-center">
+                  <img src="img/testi2.jpg" alt="Testimoni 2" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                  <h3 class="font-bold text-xl mb-2">steven Budi siregar</h3>
+                  <p class="text-gray-600 text-sm">
+                      "Saya sangat terbantu dengan layanan gizi di sini. Dokter memberikan saran yang mudah dipahami dan sangat bermanfaat."
+                  </p>
+              </div>
+          </div>
+
+          <!-- Testimoni 3 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+              <div class="p-6 text-center">
+                  <img src="img/testi4.jpg" alt="Testimoni 3" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                  <h3 class="font-bold text-xl mb-2">Louis Pramono ujunglalap</h3>
+                  <p class="text-gray-600 text-sm">
+                      "Pelayanan untuk lansia sangat baik. Dokter sangat sabar dan detail dalam menjelaskan kondisi kesehatan saya."
+                  </p>
+              </div>
+          </div>
+
+          <!-- Testimoni 4 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+              <div class="p-6 text-center">
+                  <img src="img/testi5.jpg" alt="Testimoni 4" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                  <h3 class="font-bold text-xl mb-2">Gabriel purnamasari widayanto</h3>
+                  <p class="text-gray-600 text-sm">
+                      "Saya sangat senang dengan pelayanan kandungan di sini. Dokter sangat ramah dan selalu memberikan perhatian penuh."
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+    
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <img src="img/puskes2.jpg" alt="Puskesmas STTNF"
+                        class="rounded-xl shadow-lg w-full h-[400px] object-cover">
+                </div>
+
+                <div class="md:w-1/2">
+                    <h3 class="text-3xl md:text-5xl font-bold mb-5">Tentang Puskesmas</h3>
+
+                    <p class="mb-5 font-extrabold text-gray-700">Singkat dan Informatif</p>
+                    <p class="text-gray-600 mb-5">
+                        "Puskesmas DEPOK, melayani dengan sepenuh hati untuk kesehatan masyarakat. Kami hadir
+                        untuk memberikan layanan kesehatan yang terjangkau, berkualitas, dan terpercaya."
+                    </p>
+
+                    <p class="mb-5 font-extrabold text-gray-700">Berorientasi pada misi </p>
+                    <p class="text-gray-600 mb-5">
+                        "Mewujudkan masyarakat yang sehat, mandiri, dan sejahtera melalui pelayanan kesehatan yang prima
+                        dan ramah."
+                    </p>
+
+                    <p class="mb-5 font-extrabold text-gray-700">Berfokus pada tujuan</p>
+                    <p class="text-gray-600 mb-5">
+                        "Kami peduli terhadap kesehatan Anda dan keluarga. Bersama Puskesmas depoK, mari wujudkan
+                        hidup sehat untuk semua." </p>
+
+                    <!-- Link icon der-->
+                    <ul class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-5">
+                        <li>
+                            <a href="https://rs.ui.ac.id/umum/"
+                                class="flex items-center text-blue-600 hover:text-blue-800">
+                                <i class="fa-solid fa-hospital mr-2"></i> Rumah Sakit Terdekat
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-blue-600 hover:text-blue-800">
+                              <i class="fa-brands fa-github"></i> Github</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCY2UNAkmyakym3IUgjLZ9Lw"
+                                class="flex items-center text-blue-600 hover:text-blue-800">
+                                <i class="fa-brands fa-youtube mr-2"></i> Youtube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <p class="mb-4">© 2025 Puskesmas Depok.</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="hover:text-red-400 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-red-400 transition">Terms of Service</a>
+                    <a href="#" class="hover:text-red-400 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./backend/script.js ">
+    </script>
+</body>
+
+</html>
